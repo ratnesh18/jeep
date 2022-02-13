@@ -35,13 +35,8 @@ export default function Audi() {
     
 
   return (
-    <div><div className="portrait">
-    <div className="portrait-center text-center text-white">
-  <img src="img/rotate.gif" className="img-fluid"/>
-  <h3>Please Check Auto Rotate Before Rotate Your Device</h3>
-  </div>
-    </div>
-    <div className="landscape">
+    <div>
+    <div className="">
     <div id="audi">
       <div className="video-container" style={{height:'100vh'}}>
       <video

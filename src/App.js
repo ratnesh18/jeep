@@ -16,7 +16,8 @@ function App() {
           <Route path='/audi' element={<Audi/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/counter' element={<CountDownTimer/>}/>
-          <Route path='/' element={<Register/>}/>
+          <Route path='/register' element={<Register/>}/>
+          {/* <Route path='/' element={<Register/>}/> */}
         </Routes>
       </Router>
     </div>

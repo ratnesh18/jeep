@@ -3,13 +3,8 @@ import React from 'react'
 export default function Login() {
 
   return (
-    <div><div className="portrait">
-  <div className="portrait-center text-center text-white">
-<img src="img/rotate.gif" className="img-fluid"/>
-<h3>Please Check Auto Rotate Before Rotate Your Device</h3>
-</div>
-  </div>
-  <div className="landscape">
+    <div>
+  <div className="">
   <div className="main-content1 text-center">
   <img src="img/jeep-logo.png" className="img-fluid mt-lg-5 mt-sm-2"/>
     <p className="datetimeinfo mt-2">16<sup>th</sup> February 2022,10 am onwards </p>
