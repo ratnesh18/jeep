@@ -38,7 +38,7 @@
             now: undefined,
             selectors: {
                 value_seconds: '.clock-seconds .val',
-                canvas_seconds: 'canvas-seconds',
+                // canvas_seconds: 'canvas-seconds',
                 value_minutes: '.clock-minutes .val',
                 canvas_minutes: 'canvas-minutes',
                 value_hours: '.clock-hours .val',
@@ -113,7 +113,7 @@
     }
 
     function updateCircles() {     
-        layerSeconds.draw();
+       
         layerMinutes.draw();
         layerHours.draw();
         layerDays.draw();
@@ -135,38 +135,43 @@
 
     function prepareCounters() {
         // Seconds
-        var seconds_width = $('#' + settings.selectors.canvas_seconds).width()
-        var secondsStage = new Kinetic.Stage({
-            container: settings.selectors.canvas_seconds,
-            width: seconds_width,
-            height: seconds_width
-        });
+        // var seconds_width = $('#' + settings.selectors.canvas_seconds).width()
+        // var secondsStage = new Kinetic.Stage({
+        //     container: settings.selectors.canvas_seconds,
+        //     width: seconds_width,
+        //     height: seconds_width
+        // });
 
-        circleSeconds = new Kinetic.Shape({
-            drawFunc: function(context) {
-                var seconds_width = $('#' + settings.selectors.canvas_seconds).width()
-                var radius = seconds_width / 2 - settings.seconds.borderWidth / 2;
-                var x = seconds_width / 2;
-                var y = seconds_width / 2;
+        // circleSeconds = new Kinetic.Shape({
+        //     drawFunc: function(context) {
+        //         var seconds_width = $('#' + settings.selectors.canvas_seconds).width()
+        //         var radius = seconds_width / 2 - settings.seconds.borderWidth / 2;
+        //         var x = seconds_width / 2;
+        //         var y = seconds_width / 2;
 
-                context.beginPath();
-                context.arc(x, y, radius, convertToDeg(0), convertToDeg(timer.seconds * 6));
-                context.fillStrokeShape(this);
+        //         context.beginPath();
+        //         context.arc(x, y, radius, convertToDeg(0), convertToDeg(timer.seconds * 6));
+        //         context.fillStrokeShape(this);
 
-                $(settings.selectors.value_seconds).html(60 - timer.seconds);
-            },
-            stroke: settings.seconds.borderColor,
-            strokeWidth: settings.seconds.borderWidth
-        });
+        //         $(settings.selectors.value_seconds).html(60 - timer.seconds);
+        //     },
+        //     stroke: settings.seconds.borderColor,
+        //     strokeWidth: settings.seconds.borderWidth
+        // });
 
-        layerSeconds = new Kinetic.Layer();
-        layerSeconds.add(circleSeconds);
-        secondsStage.add(layerSeconds);
+        // layerSeconds = new Kinetic.Layer();
+        // layerSeconds.add(circleSeconds);
+        // secondsStage.add(layerSeconds);
 
         // Minutes
         var minutes_width = $('#' + settings.selectors.canvas_minutes).width();
+        console.log(screen.width);
+        if(screen.width < 768){
+            //minutes_width = minutes_width*0.8;
+        }
         var minutesStage = new Kinetic.Stage({
             container: settings.selectors.canvas_minutes,
+            
             width: minutes_width,
             height: minutes_width
         });
@@ -294,7 +299,7 @@
                 timer.seconds++;
             }
 
-            layerSeconds.draw();
+            
         }, 1000);
     }
 })(jQuery);
