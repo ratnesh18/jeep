@@ -6,6 +6,7 @@ import ThankYou from './components/ThankYou';
 import CountDownTimer from './components/CountDownTimer';
 import Audi from './components/Audi';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/counter' element={<CountDownTimer/>}/>
           <Route path='/register' element={<Register/>}/>
-          {/* <Route path='/' element={<Register/>}/> */}
+          <Route path='/' element={<Home/>}/>
         </Routes>
       </Router>
     </div>
