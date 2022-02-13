@@ -1,0 +1,46 @@
+.clock-item .inner {
+	height: 0px;
+	padding-bottom: 100%;
+	position: relative;	
+	width: 100%;
+}
+
+.clock-canvas {
+	background-color:rgba(33, 22, 2, .1);
+	border-radius: 50%;
+	height: 0px;
+	border:#b79a56 solid;
+	padding-bottom: 100%;
+}
+
+.text {
+	color: #B8985C;	
+	font-size: 30px;
+	font-weight: bold;	
+	margin-top: -20px;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	width: 100%;
+}
+
+.text .val {
+	font-size: 50px;
+}
+
+.text .type-time {
+	font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.clock-item {
+		margin-bottom: 30px;		
+	}
+}
+
+@media (max-width: 767px) {
+	.clock-item {
+		margin: 0px 30px 30px 30px;
+	}
+}
