@@ -14,7 +14,9 @@ export default function Users() {
     const[userCat,setUserCat]=useState('login')
     
     useEffect(()=>{
-        
+        if(localStorage.getItem("UserCategory")!==undefined || localStorage.getItem("UserCategory")!==''){
+            $('#category').val(localStorage.getItem("UserCategory"))
+        }
 			$('#example').DataTable(); 
 		
     },[users])
