@@ -19,7 +19,7 @@ export default function CountDownTimer() {
   <div className="d-flex justify-content-center">
   <img src="img/mountain.png" class="img-fluid mountain"/>
   <div className="col-md-9 col-xl-7 col-sm-12">
-  <h1 className="thankyoutxt">EXTREME ADVENTURE
+  <h1 className="thankyoutxt">ADVENTURE
   <br/>
   WILL BEGIN SOON</h1>
   
