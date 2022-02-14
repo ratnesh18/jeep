@@ -95,7 +95,7 @@ outline: none;
 @media screen and (max-width: 1023px) and (min-width: 320px) {
 	.datetimeinfo{font-size:20px;font-weight:600;}
 		.thankyoutxt{font-size:30px;font-weight:700;line-height:40px;}
-		.text .val{font-size:30px!important;}
+		.text .val{font-size:25px!important;margin-top:5px;}
 		.forqueries {font-size: 20px;line-height:25px;}
 	}
 

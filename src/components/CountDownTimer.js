@@ -15,7 +15,7 @@ export default function CountDownTimer() {
       <p className="datetimeinfo mt-2">16<sup>th</sup> February 2022,10 am onwards </p>
   <div className="d-flex justify-content-center">
   <img src="img/mountain.png" class="img-fluid mountain"/>
-  <div className="col-md-7 col-sm-12">
+  <div className="col-md-9 col-xl-7 col-sm-12">
   <h1 className="thankyoutxt">EXTREME ADVENTURE
   <br/>
   WILL BEGIN SOON</h1>
@@ -67,13 +67,7 @@ export default function CountDownTimer() {
           </div>
   
       </div>
-     
-      
-    
-  
-  
-          
-          
+           
       </div>
   </div>
   </div>
