@@ -16,7 +16,7 @@ function App() {
           <Route path='/thank-you' element={<ThankYou/>}/>
           <Route path='/audi' element={<Audi/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/counter' element={<CountDownTimer/>}/>
+          <Route path='/event' element={<CountDownTimer/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>

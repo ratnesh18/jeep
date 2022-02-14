@@ -1,6 +1,47 @@
 import React from 'react'
+import axios from 'axios'
 
+import { useForm } from "react-hook-form";
+import {useNavigate} from 'react-router-dom';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+const schema = yup.object({
+  
+  email: yup.string().required(),
+  
+})
 export default function Login() {
+
+  const { register, handleSubmit, formState:{ errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
+  const navigate = useNavigate()
+  const onSubmit = (data,e )=>{
+    console.log("FormData",data);
+   // navigate("/thank-you")
+    e.preventDefault();
+
+    axios
+    .post('https://api.jeep-adc2022.com/api/auth/login', data)
+    .then(function (response) {
+      console.log("Response",response.data);
+      if(!response.data.status){
+        document.getElementById("allowLogin").innerHTML=response.data.message
+        
+      }else{
+        localStorage.setItem("allowLogin","true")
+        navigate("/event")
+      }
+
+    })
+    .catch(function (error) {
+        console.log(error);
+       
+    });
+  } 
+
+  
 
   return (
     <div>
@@ -12,12 +53,13 @@ export default function Login() {
 <img src="img/mountain.png" class="img-fluid mountain"/>
 <div className="col-md-6 col-sm-6 col-lg-4 col-xl-3 ">
 <p className="text-white registr">LOGIN</p>
-	<form>
+<p  style={{color:'red'}} id="allowLogin"></p>
+	<form onSubmit={handleSubmit(onSubmit)}>
   
     <div className="form-group row mt-lg-4 mt-sm-2  text-left">
     <label for="useremail" className="col-sm-2 col-form-label ">Email</label>
     <div className="col-sm-10">
-      <input type="email" className="form-control" id="useremail" autocomplete="off" />
+      <input type="email" className="form-control" id="useremail" {...register("email", { required: true, maxLength: 20 })} autoComplete="off" />
     </div>
   </div>
     

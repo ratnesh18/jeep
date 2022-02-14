@@ -1,8 +1,17 @@
 
 import React,{useState,useEffect} from 'react'
 import $ from 'jquery'
+import {useNavigate} from 'react-router-dom';
 
 export default function CountDownTimer() {
+    const navigate = useNavigate()
+    useEffect(()=>{
+        if(localStorage.getItem("allowLogin")){
+
+        }else{
+          navigate("/login")
+        }
+    })
 
     window.addEventListener('orientationchange', function(event) {
         console.log("orintation changed")
