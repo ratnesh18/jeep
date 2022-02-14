@@ -23,7 +23,7 @@ export default function CountDownTimer() {
   <br/>
   WILL BEGIN SOON</h1>
   
-  <div className="forqueries p-2 col-md-7 col-xl-6 col-sm-12 m-auto">
+  <div class="forqueries p-2 col-md-12 col-xl-6 col-sm-12 m-auto">
   <div className="countdown countdown-container">
       <div className="clock row d-flex justify-content-center">
       <div className="col-sm-3 col-xl-4 mt-3 mb-3">
