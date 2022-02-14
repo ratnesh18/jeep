@@ -63,7 +63,9 @@ export default function Login() {
     </div>
   </div>
     
-   
+  <div className="form-group mt-lg-4 mt-sm-2 text-left">
+ 
+  </div>
   <div className="form-group mt-lg-4 mt-sm-2 text-right">
      <button type="submit" className="btn btn-jeep pl-3 pr-3">LOGIN</button>
   </div>
