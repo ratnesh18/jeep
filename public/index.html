@@ -38,7 +38,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Jeep Extreme Adventure - 2022</title>
+    <title>JEEP</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -65,12 +65,14 @@
     <script>
        $('document').ready(function() {
            
+        let now = + new Date() ;
+       
             
-            $('.countdown').final_countdown({
-                'start': +new Date(2022,01,13,21,0,0,0),
-                'end': +new Date(2022,01,13,22,0,0,0),
-                'now': +new Date(2022,01,13,21,0,0,0)       
-            });
+        $('.countdown').final_countdown({
+            'start': Math.round((new Date()).getTime() / 1000),
+            'end': 1644985800,
+            'now': Math.round((new Date()).getTime() / 1000)        
+        });
         });
     </script>
   </body>

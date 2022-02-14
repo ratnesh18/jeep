@@ -9,12 +9,13 @@ export default function Login() {
   <img src="img/jeep-logo.png" className="img-fluid mt-lg-5 mt-sm-2"/>
     <p className="datetimeinfo mt-2">16<sup>th</sup> February 2022,10 am onwards </p>
 <div className="d-flex justify-content-center">
+<img src="img/mountain.png" class="img-fluid mountain"/>
 <div className="col-md-6 col-sm-6 col-lg-4 col-xl-3 ">
 <p className="text-white registr">LOGIN</p>
 	<form>
   
-    <div className="form-group row mt-lg-4 mt-sm-2">
-    <label for="useremail" className="col-sm-2 col-form-label">Email</label>
+    <div className="form-group row mt-lg-4 mt-sm-2  text-left">
+    <label for="useremail" className="col-sm-2 col-form-label ">Email</label>
     <div className="col-sm-10">
       <input type="email" className="form-control" id="useremail" autocomplete="off" />
     </div>

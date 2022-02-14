@@ -21,15 +21,7 @@ body{background-color:#211602;color:#B8985C; font-family: "DINPro";}
     width: 100vw;
     position: absolute;
 }
-.main-content1{
-	    background: url(../img/jeep-bg.png) no-repeat center center fixed!important;
-    -webkit-background-size: cover!important;
-    -moz-background-size: cover!important;
-    -o-background-size: cover!important;
-    background-size: cover!important;
-    height: 100vh!important;
-	overflow:hidden;overflow-y:scroll;
-}
+
 .main-content{position:relative;}
 input[type="text"]{
 	background: transparent;
@@ -110,4 +102,14 @@ outline: none;
   .kineticjs-content{
     border:#b79a56 solid;
       border-radius: 50%;
+  }
+
+  .mountain{
+    position: fixed;
+      bottom: 0;
+  }
+
+  .kineticjs-content canvas{
+    top:-5px!important;
+    left:-5px!important;
   }

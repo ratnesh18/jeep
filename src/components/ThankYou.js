@@ -10,6 +10,7 @@ export default function ThankYou() {
   <img src="img/jeep-logo.png" className="img-fluid mt-lg-5 mt-sm-2"/>
     <p className="datetimeinfo mt-2">16<sup>th</sup> February 2022,10 am onwards </p>
 <div className="d-flex justify-content-center">
+<img src="img/mountain.png" class="img-fluid mountain"/>
 <div className="col-sm-7">
 <h1 className="thankyoutxt">THANK YOU<br/>
 FOR REGISTERING</h1>
