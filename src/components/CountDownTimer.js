@@ -4,7 +4,10 @@ import $ from 'jquery'
 
 export default function CountDownTimer() {
 
-
+    window.addEventListener('orientationchange', function(event) {
+        console.log("orintation changed")
+        window.location.reload();
+   });
 
 
   return (
