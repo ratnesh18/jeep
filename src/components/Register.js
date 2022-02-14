@@ -29,8 +29,12 @@ export default function Register() {
         .then(function (response) {
           console.log("Response",response.data);
           if(!response.data.status){
-            document.getElementById("allow").innerHTML=response.data.message
-              if(response.data.errors.mobile===undefined){
+            
+            if(response.data.message==="unauthorized"){
+              document.getElementById("allow").innerHTML="Please contact <a href='mailto:gurdit.lugani@stellantis.com'>gurdit.lugani@stellantis.com</a>"
+            }
+            
+              if(response.data.errors.mobile===undefined || response.data.errors.mobile==='' ){
                 document.getElementById("mobileCheck").innerHTML=""
               }else{
                 document.getElementById("mobileCheck").innerHTML=response.data.errors.mobile
@@ -58,7 +62,7 @@ export default function Register() {
   <img src="img/mountain.png" class="img-fluid mountain"/>
   <div className="col-md-6 col-sm-6 col-lg-4 col-xl-3 ">
   <p className="text-white registr">REGISTER</p>
-  <p  style={{color:'red'}} id="allow"></p>
+  <p  style={{color:'white'}} id="allow"></p>
   <p  style={{color:'red'}} id="mobileCheck"></p>
   <form onSubmit={handleSubmit(onSubmit)}>
     <div className="form-group row mt-lg-4 mt-sm-2  text-left">

@@ -25,9 +25,16 @@ export default function Login() {
     axios
     .post('https://api.jeep-adc2022.com/api/auth/login', data)
     .then(function (response) {
-      console.log("Response",response.data);
+     // console.log("Response",response.data);
       if(!response.data.status){
-        document.getElementById("allowLogin").innerHTML=response.data.message
+      // console.log("Errrrr",response.data.message)
+        if(response.data.message==="unauthorized"){
+          document.getElementById("allowLogin").innerHTML="Please contact <a href='mailto:gurdit.lugani@stellantis.com'>gurdit.lugani@stellantis.com</a>"
+        }
+        if(response.data.message==="unregistred"){
+          document.getElementById("allowLogin").innerHTML="Kindly register yourself <a href='/register'>here</a>"
+        }
+      //  document.getElementById("allowLogin").innerHTML=response.data.message
         
       }else{
         localStorage.setItem("allowLogin","true")
@@ -53,7 +60,8 @@ export default function Login() {
 <img src="img/mountain.png" class="img-fluid mountain"/>
 <div className="col-md-6 col-sm-6 col-lg-4 col-xl-3 ">
 <p className="text-white registr">LOGIN</p>
-<p  style={{color:'red'}} id="allowLogin"></p>
+
+<p  style={{color:'white'}} id="allowLogin"></p>
 	<form onSubmit={handleSubmit(onSubmit)}>
   
     <div className="form-group row mt-lg-4 mt-sm-2  text-left">
