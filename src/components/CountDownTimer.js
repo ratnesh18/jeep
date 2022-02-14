@@ -26,7 +26,7 @@ export default function CountDownTimer() {
   <div class="forqueries p-2 col-md-12 col-xl-6 col-sm-12 m-auto">
   <div className="countdown countdown-container">
       <div className="clock row d-flex justify-content-center">
-      <div className="col-sm-3 col-xl-4 mt-3 mb-3">
+      <div className="col-sm-3 col-xl-4 mt-3 mb-5">
             <div className="clock-item clock-days countdown-time-value">
               <div className="wrap">
                   <div className="inner">
@@ -41,7 +41,7 @@ export default function CountDownTimer() {
           </div> 
             
       </div>
-      <div className="col-sm-3 col-xl-4 mt-3 mb-3">	 
+      <div className="col-sm-3 col-xl-4 mt-3 mb-5">	 
           <div className="clock-item clock-hours countdown-time-value"> 
               <div className="wrap">
                   <div className="inner">
@@ -55,7 +55,7 @@ export default function CountDownTimer() {
               </div>
           </div>
       </div>
-      <div className="col-sm-3 col-xl-4 mt-3 mb-3">
+      <div className="col-sm-3 col-xl-4 mt-3 mb-5">
       <div className="clock-item clock-minutes countdown-time-value">
               <div className="wrap">
                   <div className="inner">
