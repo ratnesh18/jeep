@@ -8,11 +8,30 @@ export default function CountDownTimer() {
     useEffect(()=>{
         
         if(localStorage.getItem("allowLogin")){
+            farwordToAudi();
 
+            setInterval(()=>{
+                farwordToAudi();
+            },1000)
+       
         }else{
           navigate("/login")
         }
+
+
     })
+
+    const farwordToAudi=()=>{
+        var h=  document.getElementById("hrCounter").innerHTML;
+        var m=  document.getElementById("minCounter").innerHTML;
+        var s=  document.getElementById("secCounter").innerHTML;
+        console.log("mmm h m s ",h+" "+m+" "+s);
+       if(h == 0 && m == 0 && s == 0 ){
+           
+        console.log(" h m s ",h+" "+m+" "+s);
+        navigate("/audi")
+       }
+    }
 
     window.addEventListener('orientationchange', function(event) {
         console.log("orintation changed")
@@ -22,7 +41,7 @@ export default function CountDownTimer() {
 
   return (
     <div>
-    <div className="">
+    <div className="landscape">
     <div className="main-content1 text-center">
     <img src="img/jeep-logo.png" className="img-fluid mt-lg-5 mt-sm-2"/>
       <p className="datetimeinfo mt-2">16<sup>th</sup> February 2022,10 am onwards </p>
@@ -58,7 +77,7 @@ export default function CountDownTimer() {
                       <div id="canvas-hours" className="clock-canvas"></div>
   
                       <div className="text">
-                          <p className="val mb-0">0</p>
+                          <p className="val mb-0" id="hrCounter">0</p>
                       </div>
                          <p className="type-hours type-time mb-0 mt-2">HOURS</p>
                   </div>
@@ -72,7 +91,7 @@ export default function CountDownTimer() {
                       <div id="canvas-minutes" className="clock-canvas"></div>
   
                       <div className="text">
-                          <p className="val mb-0">0</p>                       
+                          <p className="val mb-0" id="minCounter">0</p>                       
                       </div>
                        <p className="type-minutes type-time mb-0 mt-2">MINUTES</p>
                   </div>
@@ -86,7 +105,7 @@ export default function CountDownTimer() {
                     <div id="canvas-seconds" class="clock-canvas"></div>
 
                     <div class="text">
-                        <p class="val mb-0">0</p>                        
+                        <p class="val mb-0" id="secCounter">0</p>                        
                     </div>
 					<p class="type-seconds type-time mb-0 mt-2">SECONDS</p>
                 </div>

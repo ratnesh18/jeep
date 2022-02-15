@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div> <div className="main-content1 text-center">
+    <div className='landscape'> <div className="main-content1 text-center">
  
     <div className="d-flex justify-content-center ">
     <img src="img/mountain.png" className="img-fluid mountain"/>

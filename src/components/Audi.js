@@ -36,7 +36,7 @@ export default function Audi() {
 
   return (
     <div>
-    <div className="">
+    <div className="landscape">
     <div id="audi">
       <div className="video-container" style={{height:'100vh'}}>
       <video
