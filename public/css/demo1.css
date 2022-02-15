@@ -13,11 +13,6 @@
 	padding-bottom: 100%;
 }
 
-.kineticjs-content {
-	border:#b79a56 solid;
-		border-radius: 50%;
-}
-
 .text {
 	color: #B8985C;	
 	font-size: 30px;
@@ -31,15 +26,11 @@
 }
 
 .text .val {
-	font-size: 18px;
-   
-	line-height: 36px;
+	font-size: 50px;
 }
 
-.type-time {
-	font-size: 12px;
-	font-weight: 800 !important;
-	text-shadow: 1px 1px 1px rgb(0 0 0);
+.text .type-time {
+	font-size: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -50,6 +41,6 @@
 
 @media (max-width: 767px) {
 	.clock-item {
-		margin: 0px 7px 7px 7px;
+		margin: 0px 30px 30px 30px;
 	}
 }

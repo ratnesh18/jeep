@@ -22,17 +22,15 @@ body{background-color:#211602;color:#B8985C; font-family: "DINPro";}
     position: absolute;
 }
 
-.mountain{
-	position: fixed;
-    bottom: 0;
-}
-
-.kineticjs-content canvas{
-	top:-5px!important;
-	left:-5px!important;
-}
 .main-content{position:relative;}
 input[type="text"]{
+	background: transparent;
+	border-image-source: linear-gradient(0.25turn, #DCA04B, #B07543, #FFDF72, #E9B368, #B07543, #DCA04B, #A06633, #572709);
+  border-width: 2pt;
+  border-image-slice: 1;
+  color:#B8985C;
+}
+input[type="number"]{
 	background: transparent;
 	border-image-source: linear-gradient(0.25turn, #DCA04B, #B07543, #FFDF72, #E9B368, #B07543, #DCA04B, #A06633, #572709);
   border-width: 2pt;
@@ -50,8 +48,13 @@ input[type="text"]:focus{
 background: transparent;
 outline: none;
 color:#B8985C;
-
 }
+input[type="number"]:focus{
+  background: transparent;
+  outline: none;
+  color:#B8985C;
+  
+  }
 input[type="email"]:focus{
 background: transparent;
 outline: none;
@@ -92,15 +95,25 @@ outline: none;
 @media screen and (max-width: 1023px) and (min-width: 320px) {
 	.datetimeinfo{font-size:20px;font-weight:600;}
 		.thankyoutxt{font-size:30px;font-weight:700;line-height:40px;}
-		.text .val{font-size:11px!important;margin-top:5px;line-height:30px!important;}
-		.forqueries {font-size: 20px;line-height:27px;}
-		.type-time {font-size:8px!important;font-weight: 800;}
-		.logintimer {position:relative!important;top:37vh!important;left:18px!important;}
+		.text .val{font-size:25px!important;margin-top:5px;}
+		.forqueries {font-size: 20px;line-height:25px;}
 	}
-	
-	 @media screen and (orientation:portrait) { 
-.text .val{font-size:50px!important;margin-top:5px;}
-	 }
-	 
-	 .afterlogin{width:100vw;height:100vh;left:0;position:absolute;}
-	 .logintimer{position:relative;top:39vh;}
+
+  .kineticjs-content{
+    border:#b79a56 solid;
+      border-radius: 50%;
+  }
+
+  .mountain{
+    position: fixed;
+      bottom: 0;
+  }
+
+  .kineticjs-content canvas{
+    top:-5px!important;
+    left:-5px!important;
+  }
+
+  @media screen and (orientation:portrait) { 
+    .text .val{font-size:50px!important;margin-top:5px;}
+       }

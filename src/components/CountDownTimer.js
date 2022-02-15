@@ -42,80 +42,59 @@ export default function CountDownTimer() {
     <div>
     <div className="landscape">
     <div className="main-content1 text-center">
-    <img src="img/jeep-logo.png" className="img-fluid mt-lg-5 mt-sm-2"/>
-      <p className="datetimeinfo mt-2">16<sup>th</sup> February 2022,10 am onwards </p>
-  <div className="d-flex justify-content-center">
-  <img src="img/mountain.png" class="img-fluid mountain"/>
-  <div className="col-md-9 col-xl-7 col-sm-12">
-  <h1 className="thankyoutxt">ADVENTURE
-  <br/>
-  WILL BEGIN SOON</h1>
-  
-  <div class="forqueries p-2 col-md-12 col-xl-6 col-sm-12 m-auto">
-  <div className="countdown countdown-container">
-      <div className="clock row d-flex justify-content-center">
-      {/* <div className="col-sm-3 col-xl-4 mt-3 mb-5">
-            <div className="clock-item clock-days countdown-time-value">
-              <div className="wrap">
-                  <div className="inner">
-                      <div id="canvas-days" className="clock-canvas"></div>
-  
-                      <div className="text">
-                          <p className="val mb-0">0</p>                  
-                      </div>
-                            <p className="type-days type-time  mb-0 mt-2">DAYS</p>
-                  </div>
-              </div>
-          </div> 
-            
-      </div> */}
-      <div className="col-sm-3 col-xl-4 mt-3 mb-5">	 
-          <div className="clock-item clock-hours countdown-time-value"> 
-              <div className="wrap">
-                  <div className="inner">
-                      <div id="canvas-hours" className="clock-canvas"></div>
-  
-                      <div className="text">
-                          <p className="val mb-0" id="hrCounter">0</p>
-                      </div>
-                         <p className="type-hours type-time mb-0 mt-2">HOURS</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div className="col-sm-3 col-xl-4 mt-3 mb-5">
-      <div className="clock-item clock-minutes countdown-time-value">
-              <div className="wrap">
-                  <div className="inner">
-                      <div id="canvas-minutes" className="clock-canvas"></div>
-  
-                      <div className="text">
-                          <p className="val mb-0" id="minCounter">0</p>                       
-                      </div>
-                       <p className="type-minutes type-time mb-0 mt-2">MINUTES</p>
-                  </div>
-              </div>
-          </div>
-          </div>
-          <div className="col-sm-3 col-xl-4 mt-3 mb-5">
-          <div class="clock-item clock-seconds countdown-time-value">
-            <div class="wrap">
-                <div class="inner">
-                    <div id="canvas-seconds" class="clock-canvas"></div>
+    <img src="img/afterlogin.png" className="img-fluid afterlogin"/>
+    <div className="d-flex justify-content-center">
+    <div className="col-xl-2 col-sm-4 col-md-3 ">
+  <div className="logintimer container">
 
-                    <div class="text">
-                        <p class="val mb-0" id="secCounter">0</p>                        
+  <div className="countdown countdown-container">
+    <div className="clock row">
+
+	<div className="col-sm-3 col-xl-4 col-md-4 mt-3 mb-5 pl-sm-0 pr-sm-0  pl-xl-0 pr-xl-3  pr-md-2">	
+        <div className="clock-item clock-hours countdown-time-value">
+            <div className="wrap">
+                <div className="inner">
+                    <div id="canvas-hours" className="clock-canvas"></div>
+
+                    <div className="text">
+                        <p className="val mb-0" id="hrCounter">0</p>
                     </div>
-					<p class="type-seconds type-time mb-0 mt-2">SECONDS</p>
+					   <p className="type-hours type-time mt-xl-1 mt-sm- mb-0">HOURS</p>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div className="col-sm-3 col-xl-4 col-md-4 mt-3 mb-5 pl-sm-0 pr-sm-0  pl-xl-0 pr-xl-3  pr-md-2">
+	<div className="clock-item clock-minutes countdown-time-value">
+            <div className="wrap">
+                <div className="inner">
+                    <div id="canvas-minutes" className="clock-canvas"></div>
+
+                    <div className="text">
+                        <p className="val mb-0" id="minCounter">0</p>                       
+                    </div>
+					 <p className="type-minutes type-time mt-xl-1 mt-sm- mb-2">MINUTES</p>
+                </div>
+            </div>
+        </div>
+
+	</div>
+	<div className="col-sm-3 col-xl-4 col-md-4 mt-3 mb-5 pl-sm-0 pr-sm-0 pl-xl-0 pr-xl-3 pl-md-0 pr-md-2">
+          <div className="clock-item clock-seconds countdown-time-value">
+            <div className="wrap">
+                <div className="inner">
+                    <div id="canvas-seconds" className="clock-canvas"></div>
+
+                    <div className="text">
+                        <p className="val mb-0" id="secCounter">0</p>                        
+                    </div>
+					<p className="type-seconds type-time mb-0 mt-xl-1 mt-sm-0">SECONDS</p>
                 </div>
             </div>
         </div>
         </div>
-  
-      
-           
-      </div>
-  </div>
+	</div>
+</div>
   </div>
   </div>
   </div>
