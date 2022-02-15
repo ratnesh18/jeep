@@ -38,7 +38,8 @@ export default function Login() {
         
       }else{
         localStorage.setItem("allowLogin","true")
-        navigate("/event")
+        //navigate("/event")
+        window.location.href="/event"
       }
 
     })

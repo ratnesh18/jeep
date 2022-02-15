@@ -5,18 +5,19 @@ import {useNavigate} from 'react-router-dom';
 
 export default function CountDownTimer() {
     const navigate = useNavigate()
-    useEffect(()=>{
-        if(localStorage.getItem("allowLogin")){
+    // useEffect(()=>{
+        
+    //     if(localStorage.getItem("allowLogin")){
 
-        }else{
-          navigate("/login")
-        }
-    })
+    //     }else{
+    //       navigate("/login")
+    //     }
+    // })
 
-    window.addEventListener('orientationchange', function(event) {
-        console.log("orintation changed")
-        window.location.reload();
-   });
+//     window.addEventListener('orientationchange', function(event) {
+//         console.log("orintation changed")
+//         window.location.reload();
+//    });
 
 
   return (
