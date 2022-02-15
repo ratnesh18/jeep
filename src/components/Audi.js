@@ -13,7 +13,7 @@ export default function Audi() {
     },[])
 
     useEffect(() => {
-            console.log("Mount or update")
+            console.log("Mount or update in audi")
             const script = document.createElement('script');
 
             script.src = 'https://player.live-video.net/1.0.0/amazon-ivs-player.min.js';
