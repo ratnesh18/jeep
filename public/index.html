@@ -58,23 +58,23 @@
     -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172114682-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'UA-172114682-1');
-</script>
+      gtag('config', 'UA-172114682-1');
+    </script>
     <script>
        $('document').ready(function() {
            
-        let now = + new Date() ;
+       // let now = + new Date() ;
        
             
         $('.countdown').final_countdown({
             'start': Math.round((new Date()).getTime() / 1000),
            // 'end': 1644985800,
-           'end': Math.round((new Date(2022,01,16,0,0,0,0)).getTime() / 1000),
+           'end': Math.round((new Date(2022,01,16,10,0,0,0)).getTime() / 1000),
             'now': Math.round((new Date()).getTime() / 1000)        
         });
         });
