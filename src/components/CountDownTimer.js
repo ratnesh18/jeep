@@ -21,21 +21,23 @@ export default function CountDownTimer() {
 
     })
        const farwordToAudi=()=>{
+
         var h=  document.getElementById("hrCounter").innerHTML;
         var m=  document.getElementById("minCounter").innerHTML;
         var s=  document.getElementById("secCounter").innerHTML;
-        console.log("mmm h m s ",h+" "+m+" "+s);
-       if(h == 0 && m == 0 && s == 0 ){
+       // console.log("mmm h m s ",h+" "+m+" "+s);
+       if(h == 0 && m == 0 && s == 0 && window.innerHeight < window.innerWidth){
+           console.log("Rotation")
         clearInterval(audiMover)
         console.log(" h m s ",h+" "+m+" "+s);
-        navigate("/audi")
+       navigate("/audi")
        }
     }
 
-    window.addEventListener('orientationchange', function(event) {
-        console.log("orintation changed")
-        window.location.reload();
-   });
+//     window.addEventListener('orientationchange', function(event) {
+//         console.log("orintation changed")
+//         window.location.reload();
+//    });
 
 
   return (
