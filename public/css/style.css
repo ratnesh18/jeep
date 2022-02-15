@@ -52,6 +52,21 @@ outline: none;
 color:#B8985C;
 
 }
+
+input[type="number"]:focus{
+  background: transparent;
+  outline: none;
+  color:#B8985C;
+  
+  }
+  input[type="number"]{
+    background: transparent;
+    border-image-source: linear-gradient(0.25turn, #DCA04B, #B07543, #FFDF72, #E9B368, #B07543, #DCA04B, #A06633, #572709);
+    border-width: 2pt;
+    border-image-slice: 1;
+    color:#B8985C;
+  }
+
 input[type="email"]:focus{
 background: transparent;
 outline: none;
