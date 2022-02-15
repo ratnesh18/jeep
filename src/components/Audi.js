@@ -1,8 +1,17 @@
 import React,{useState,useEffect,useRef} from 'react'
-
+import {useNavigate} from 'react-router-dom';
 export default function Audi() {
+    const navigate = useNavigate()
     const videoEl = useRef(null);
     let player=undefined
+
+    useEffect(()=>{
+        if(localStorage.getItem("allowLogin")){
+        }else{
+          navigate("/login")
+        }
+    },[])
+
     useEffect(() => {
             console.log("Mount or update")
             const script = document.createElement('script');

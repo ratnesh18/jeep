@@ -5,29 +5,28 @@ import {useNavigate} from 'react-router-dom';
 
 export default function CountDownTimer() {
     const navigate = useNavigate()
+    var audiMover;
     useEffect(()=>{
         
         if(localStorage.getItem("allowLogin")){
-            farwordToAudi();
-
-            setInterval(()=>{
-                farwordToAudi();
-            },1000)
-       
+            
+             audiMover= setInterval(()=>{
+                      farwordToAudi();
+             },1000)
+             farwordToAudi();
         }else{
           navigate("/login")
         }
 
 
     })
-
-    const farwordToAudi=()=>{
+       const farwordToAudi=()=>{
         var h=  document.getElementById("hrCounter").innerHTML;
         var m=  document.getElementById("minCounter").innerHTML;
         var s=  document.getElementById("secCounter").innerHTML;
         console.log("mmm h m s ",h+" "+m+" "+s);
        if(h == 0 && m == 0 && s == 0 ){
-           
+        clearInterval(audiMover)
         console.log(" h m s ",h+" "+m+" "+s);
         navigate("/audi")
        }
