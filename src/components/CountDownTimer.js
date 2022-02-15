@@ -26,7 +26,7 @@ export default function CountDownTimer() {
         var m=  document.getElementById("minCounter").innerHTML;
         var s=  document.getElementById("secCounter").innerHTML;
        // console.log("mmm h m s ",h+" "+m+" "+s);
-       if(h == 0 && m == 0 && s == 0 && window.innerHeight < window.innerWidth){
+       if(h <= 0 && m <= 0 && s <= 0 && window.innerHeight < window.innerWidth){
            console.log("Rotation")
         clearInterval(audiMover)
         console.log(" h m s ",h+" "+m+" "+s);
