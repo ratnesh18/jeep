@@ -5,19 +5,19 @@ import {useNavigate} from 'react-router-dom';
 
 export default function CountDownTimer() {
     const navigate = useNavigate()
-    // useEffect(()=>{
+    useEffect(()=>{
         
-    //     if(localStorage.getItem("allowLogin")){
+        if(localStorage.getItem("allowLogin")){
 
-    //     }else{
-    //       navigate("/login")
-    //     }
-    // })
+        }else{
+          navigate("/login")
+        }
+    })
 
-//     window.addEventListener('orientationchange', function(event) {
-//         console.log("orintation changed")
-//         window.location.reload();
-//    });
+    window.addEventListener('orientationchange', function(event) {
+        console.log("orintation changed")
+        window.location.reload();
+   });
 
 
   return (
@@ -36,7 +36,7 @@ export default function CountDownTimer() {
   <div class="forqueries p-2 col-md-12 col-xl-6 col-sm-12 m-auto">
   <div className="countdown countdown-container">
       <div className="clock row d-flex justify-content-center">
-      <div className="col-sm-3 col-xl-4 mt-3 mb-5">
+      {/* <div className="col-sm-3 col-xl-4 mt-3 mb-5">
             <div className="clock-item clock-days countdown-time-value">
               <div className="wrap">
                   <div className="inner">
@@ -50,7 +50,7 @@ export default function CountDownTimer() {
               </div>
           </div> 
             
-      </div>
+      </div> */}
       <div className="col-sm-3 col-xl-4 mt-3 mb-5">	 
           <div className="clock-item clock-hours countdown-time-value"> 
               <div className="wrap">
@@ -78,8 +78,23 @@ export default function CountDownTimer() {
                   </div>
               </div>
           </div>
+          </div>
+          <div className="col-sm-3 col-xl-4 mt-3 mb-5">
+          <div class="clock-item clock-seconds countdown-time-value">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-seconds" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val mb-0">0</p>                        
+                    </div>
+					<p class="type-seconds type-time mb-0 mt-2">SECONDS</p>
+                </div>
+            </div>
+        </div>
+        </div>
   
-      </div>
+      
            
       </div>
   </div>
